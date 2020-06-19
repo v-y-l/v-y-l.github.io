@@ -528,7 +528,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DETAILS", function() { return DETAILS; });
 var DEFAULT_DETAIL = {
     title: 'Thank you for reading.',
-    body: 'You\'ve read all of the landmark events that contribute to systemic racism in America that I know of. Please tweet at me using #systemicracismviz if I\'ve missed any events or made any typos. This is a personal labor of love, so please be understanding that I may not update the visualization right away.',
+    body: 'You\'ve read all of the landmark events that contribute to systemic racism in America that I know of. Please tweet at me using #systemicracismviz if I\'ve missed any events, made any typos, or committed any bugs. This is a labor of love, so while I may not update the visualization right away, I certainly appreciate your feedback.',
     year: 0,
     citations: [],
 };
@@ -562,7 +562,7 @@ var DETAILS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n    outline: none;\n}\n"
+module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n"
 
 /***/ }),
 
@@ -584,7 +584,7 @@ module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title>\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\n@media screen and (max-width: 840px) {\n    .viz {\n\theight: 65%;\n    }\n}\n"
+module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\n@media screen and (max-width: 840px) {\n    .viz {\n\theight: 65%;\n    }\n}\n\n@media screen and (max-width: 840px) and (max-height: 640px) {\n    .viz {\n\theight: 45%;\n    }\n}\n"
 
 /***/ }),
 
