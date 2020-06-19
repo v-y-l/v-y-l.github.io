@@ -2,5 +2,5 @@
   const path = window.location.pathname.slice(1);
   localStorage.setItem('path', path);
   const numTokens = path.match(/\//g).length + 1;
-  window.location.href='../'*numTokens;
+  window.location.href='../'.repeat(numTokens);
 </script>
