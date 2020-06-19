@@ -311,7 +311,7 @@ var Directory = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n    background: rgb(34,34,34);\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    padding: 8px 20px 8px 20px;\n}\n\n.header .user {\n    font-family: 'open-sans-bold';\n    color: white;\n}\n\n.twitter {\n    width: 22px;\n    cursor: pointer;\n}\n"
+module.exports = ".header {\n    background: rgb(34,34,34);\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    padding: 8px 20px 8px 20px;\n}\n\n.header .user {\n    font-family: 'open-sans-bold';\n    color: white;\n}\n\n.twitter {\n    width: 22px;\n    height: 22px;\n    cursor: pointer;\n}\n"
 
 /***/ }),
 
