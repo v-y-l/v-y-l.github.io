@@ -77,7 +77,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".outlet-container {\n    margin-top: 25px;\n    height: 100%;\n}\n"
+module.exports = ".outlet-container {\n    height: 100%;\n}\n"
 
 /***/ }),
 
@@ -325,7 +325,7 @@ var Directory = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n    background: rgb(34,34,34);\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    padding: 8px 20px 8px 20px;\n}\n\n.header .user {\n    font-family: 'open-sans-bold';\n    color: white;\n}\n\n.twitter {\n    width: 22px;\n    height: 22px;\n    cursor: pointer;\n}\n"
+module.exports = ".header {\n    background: rgb(34,34,34);\n    width: 100%;\n    padding: 8px 20px 8px 20px;\n}\n\n.header .user {\n    font-family: 'open-sans-bold';\n    color: white;\n}\n\n.twitter {\n    width: 22px;\n    height: 22px;\n    cursor: pointer;\n}\n"
 
 /***/ }),
 
@@ -385,7 +385,7 @@ var Header = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".panel {\n    width: 100%;\n    height: 79%;\n}\n\n@media screen and (max-width: 840px) {\n    .panel {\n\theight: 83%;\n    }\n}\n\n.header {\n    color: black;\n    background: #fafafa;\n    padding: 8px;\n    border-radius: 5px 5px 0px 0px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n}\n\n.content {\n    background: white;\n    border-radius: 0px 0px 5px 5px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n    height: 100%;\n}\n\n.close-button {\n    font-family: 'open-sans';\n    background: rgb(252,91,87);\n    min-width: 0px;\n    line-height: 0px;\n    padding: 0px;\n    border-radius: 50%;\n    width: 14px;\n    height: 14px;\n    color: transparent;\n}\n\n.close-button:hover {\n    background-color: rgb(252,91,87);\n    opacity: 1;\n    color: rgb(161,12,18);\n    font-size: 10px;\n}\n\n.close-button:hover ::ng-deep .mat-button-focus-overlay {\n    background-color: transparent;\n}\n\n.fade-in {\n    animation: fadeIn ease .5s;\n    -webkit-animation: fadeIn ease .5s;\n    -moz-animation: fadeIn ease .5s;\n    -o-animation: fadeIn ease .5s;\n    -ms-animation: fadeIn ease .5s;\n}\n\n@keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n\n@-webkit-keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n"
+module.exports = ".panel {\n    margin: 20px;\n    height: 79%;\n}\n\n.header {\n    color: black;\n    background: #fafafa;\n    padding: 8px;\n    border-radius: 5px 5px 0px 0px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n}\n\n.content {\n    background: white;\n    border-radius: 0px 0px 5px 5px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n    height: 100%;\n}\n\n.close-button {\n    font-family: 'open-sans';\n    background: rgb(252,91,87);\n    min-width: 0px;\n    line-height: 0px;\n    padding: 0px;\n    border-radius: 50%;\n    width: 14px;\n    height: 14px;\n    color: transparent;\n}\n\n.close-button:hover {\n    background-color: rgb(252,91,87);\n    opacity: 1;\n    color: rgb(161,12,18);\n    font-size: 10px;\n}\n\n.close-button:hover ::ng-deep .mat-button-focus-overlay {\n    background-color: transparent;\n}\n\n.fade-in {\n    animation: fadeIn ease .5s;\n    -webkit-animation: fadeIn ease .5s;\n    -moz-animation: fadeIn ease .5s;\n    -o-animation: fadeIn ease .5s;\n    -ms-animation: fadeIn ease .5s;\n}\n\n@keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n\n@-webkit-keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n"
 
 /***/ }),
 
@@ -452,7 +452,7 @@ var Panel = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".tile {\n    width: 100px;\n    height: 120px;\n    padding: 25px;\n    border: 1px solid transparent;\n    background: transparent;\n    border-radius: 8px;\n    line-height: 20px;\n    color: white;\n}\n\n.tile:hover {\n    background: #a7a7a773;\n}\n"
+module.exports = ".tile {\n    margin: 20px;\n    width: 100px;\n    height: 120px;\n    padding: 25px;\n    border: 1px solid transparent;\n    background: transparent;\n    border-radius: 8px;\n    line-height: 20px;\n    color: white;\n}\n\n.tile:hover {\n    background: #a7a7a773;\n}\n"
 
 /***/ }),
 
@@ -645,7 +645,7 @@ module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title>\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\n@media screen and (max-width: 840px) {\n    .viz {\n\theight: 65%;\n    }\n}\n\n@media screen and (max-width: 840px) and (max-height: 640px) {\n    .viz {\n\theight: 45%;\n    }\n}\n"
+module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\nh3 {\n   font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\n@media screen and (max-width: 840px) {\n    .viz {\n\theight: 65%;\n    }\n}\n\n@media screen and (max-width: 375px) {\n    .viz {\n\theight: 55%;\n    }\n}\n\n@media screen and (max-width: 340px) {\n    .viz {\n\theight: 45%;\n    }\n}\n"
 
 /***/ }),
 
@@ -656,7 +656,7 @@ module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    col
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div> {{text}} {{citation}} </div>\n\n<h1> <span>Systemic racism</span> is built brick by brick. </h1>\n<h2 fxHide.lt-md> Click on a block to learn more. </h2>\n<h2 fxHide.gt-sm> Click on a block after the animation completes. </h2>\n<svg class=\"viz\">\n</svg>\n"
+module.exports = "<div> {{text}} {{citation}} </div>\n\n<h1> <span>Systemic racism</span> is built brick by brick. </h1>\n<h2 fxHide.lt-md> Click on a block to learn more. </h2>\n<h3 fxHide.gt-sm> Click on a block after the animation completes. </h3>\n<svg class=\"viz\">\n</svg>\n"
 
 /***/ }),
 

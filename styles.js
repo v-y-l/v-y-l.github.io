@@ -48,7 +48,7 @@ module.exports = ".mat-elevation-z0{box-shadow:0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rg
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n@font-face {\n  font-family: open-sans-light;\n  src: url('OpenSans-Light.ttf') format(\"truetype\");\n}\n@font-face {\n  font-family: open-sans-bold;\n  src: url('OpenSans-Bold.ttf') format(\"truetype\");\n}\n@font-face {\n  font-family: open-sans;\n  src: url('OpenSans-Regular.ttf') format(\"truetype\");\n}\nhtml {\n    background: rgb(40, 44, 52);\n    height: 100%;\n    overflow: hidden;\n}\nh2 { color: #444; font-weight: lighter; }\nbody {\n    margin: 2em;\n    height: 100%;\n    overflow: hidden;\n}\nbody, input[text], button { color: #888; font-family: Cambria, Georgia; }\nbutton { padding: 0.2em; font-size: 14px}\n* { font-family: 'open-sans-light'; }\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\n@font-face {\n  font-family: open-sans-light;\n  src: url('OpenSans-Light.ttf') format(\"truetype\");\n}\n@font-face {\n  font-family: open-sans-bold;\n  src: url('OpenSans-Bold.ttf') format(\"truetype\");\n}\n@font-face {\n  font-family: open-sans;\n  src: url('OpenSans-Regular.ttf') format(\"truetype\");\n}\nhtml {\n    background: rgb(40, 44, 52);\n    height: 100%;\n    overflow: hidden;\n}\nh2 { color: #444; font-weight: lighter; }\nbody {\n    height: 100%;\n    overflow: hidden;\n    margin: 0;\n}\nbody, input[text], button { color: #888; font-family: Cambria, Georgia; }\nbutton { padding: 0.2em; font-size: 14px}\n* { font-family: 'open-sans-light'; }\n"
 
 /***/ }),
 
