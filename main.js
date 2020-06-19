@@ -820,6 +820,7 @@ var SystemicRacismViz = /** @class */ (function () {
     SystemicRacismViz.prototype.openDialog = function (d, i) {
         var dialogRef = this.dialog.open(SystemicRacismDialog, {
             width: '80%',
+            height: '70%',
             data: {
                 index: this.events.length - i - 1,
                 events: this.events,
