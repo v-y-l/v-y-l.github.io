@@ -623,7 +623,7 @@ var DETAILS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n"
+module.exports = "div.mat-dialog-content {\n    max-height: 300px;\n}\n\na {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\ndiv.mat-dialog-actions {\n    padding: 0px;\n    margin-top: 10px;\n}\n\ndiv.button-container {\n    padding: 10px;\n}\n"
 
 /***/ }),
 
@@ -634,7 +634,7 @@ module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title>\n    {{data.events[blockIndex].details.title}}\n    <span *ngIf=\"data.events[blockIndex].details.year > 1\">\n    {{data.events[blockIndex].details.year}}</span></h1>\n  <div mat-dialog-content>\n    <p>{{data.events[blockIndex].details.body}}</p>\n    <ng-container\n\t*ngFor=\"let citation of data.events[blockIndex].details.citations;\n\t\tlet i = index\">\n      {{citation.source}}: \n      <a [href]=\"citation.link\" target=\"_blank\">{{citation.name}}</a>\n      <span class=\"separator\"\n\t    *ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">, </span>\n    </ng-container>\n  </div>\n  <div mat-dialog-actions>\n    <button\n      mat-button\n      [disabled]=\"blockIndex === 0\"\n      (click)=\"onPrevious()\">Previous</button>\n    <button\n      mat-button\n      [disabled]=\"blockIndex === data.events.length - 1 ||\n\t\t  blockIndex === data.totalBlocks - 1\"\n      (click)=\"onNext()\">Next</button>\n    <button mat-button fxHide.lt-md (click)=\"onClose()\">Close</button>\n  </div>\n</div>\n"
+module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title>\n    {{data.events[blockIndex].details.title}}\n    <span *ngIf=\"data.events[blockIndex].details.year > 1\">\n    {{data.events[blockIndex].details.year}}</span></h1>\n  <div mat-dialog-content>\n    <p>{{data.events[blockIndex].details.body}}</p>\n  </div>\n  <div mat-dialog-actions>\n    <div>\n      <ng-container\n\t*ngFor=\"let citation of data.events[blockIndex].details.citations;\n\t\tlet i = index\">\n\t<span fxHide.lt-md>\n\t  {{citation.source}}:&nbsp;<a [href]=\"citation.link\"\n\t\t\t\t       target=\"_blank\">{{citation.name}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n\t<span fxHide.gt-sm>\n\t  <span *ngIf=\"i===0\">Citation:&nbsp;</span>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{i+1}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n      </ng-container>\n    </div>\n    <div class=\"button-container\">\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === 0\"\n\t(click)=\"onPrevious()\">Previous</button>\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === data.events.length - 1 ||\n\t\t    blockIndex === data.totalBlocks - 1\"\n\t(click)=\"onNext()\">Next</button>\n      <button mat-button fxHide.lt-md (click)=\"onClose()\">Close</button>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -820,7 +820,7 @@ var SystemicRacismViz = /** @class */ (function () {
     SystemicRacismViz.prototype.openDialog = function (d, i) {
         var dialogRef = this.dialog.open(SystemicRacismDialog, {
             width: '80%',
-            height: '70%',
+            maxHeight: '70%',
             data: {
                 index: this.events.length - i - 1,
                 events: this.events,
