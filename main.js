@@ -322,7 +322,7 @@ module.exports = ".header {\n    background: rgb(34,34,34);\n    position: fixed
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end\"\n     class=\"header\">\n  <img\n    class=\"twitter\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
+module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end center\"\n     class=\"header\">\n  <img\n    class=\"twitter\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
 
 /***/ }),
 
@@ -584,7 +584,7 @@ module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title>\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n"
+module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\n@media screen and (max-width: 840px) {\n    .viz {\n\theight: 65%;\n    }\n}\n"
 
 /***/ }),
 
@@ -595,7 +595,7 @@ module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    col
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div> {{text}} {{citation}} </div>\n\n<h1> <span>Systemic racism</span> is built brick by brick. </h1>\n<h2 fxHide.lt-md> Click on a block to learn more. </h2>\n<svg class=\"viz\">\n</svg>\n"
+module.exports = "<div> {{text}} {{citation}} </div>\n\n<h1> <span>Systemic racism</span> is built brick by brick. </h1>\n<h2 fxHide.lt-md> Click on a block to learn more. </h2>\n<h2 fxHide.gt-sm> Click on a block after the animation completes. </h2>\n<svg class=\"viz\">\n</svg>\n"
 
 /***/ }),
 
