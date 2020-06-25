@@ -38,6 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/desktop/desktop */ "./src/app/pages/desktop/desktop.ts");
 /* harmony import */ var _pages_folder_folder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/folder/folder */ "./src/app/pages/folder/folder.ts");
 /* harmony import */ var _pages_post_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/post/post */ "./src/app/pages/post/post.ts");
+/* harmony import */ var _pages_about_about__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/about/about */ "./src/app/pages/about/about.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -49,10 +50,12 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { path: '', component: _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_2__["Desktop"] },
     { path: 'folder/:id', component: _pages_folder_folder__WEBPACK_IMPORTED_MODULE_3__["Folder"] },
     { path: 'post/:id', component: _pages_post_post__WEBPACK_IMPORTED_MODULE_4__["Post"] },
+    { path: 'about', component: _pages_about_about__WEBPACK_IMPORTED_MODULE_5__["About"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -150,24 +153,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angular-in-memory-web-api */ "./node_modules/angular-in-memory-web-api/index.js");
-/* harmony import */ var _in_memory_data_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./in-memory-data.service */ "./src/app/in-memory-data.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _components_panel_panel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/panel/panel */ "./src/app/components/panel/panel.ts");
-/* harmony import */ var _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/shortcut/shortcut */ "./src/app/components/shortcut/shortcut.ts");
-/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/header/header */ "./src/app/components/header/header.ts");
-/* harmony import */ var _components_directory_directory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/directory/directory */ "./src/app/components/directory/directory.ts");
-/* harmony import */ var _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/viz/systemic_racism/systemic_racism */ "./src/app/components/viz/systemic_racism/systemic_racism.ts");
-/* harmony import */ var _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/desktop/desktop */ "./src/app/pages/desktop/desktop.ts");
-/* harmony import */ var _pages_folder_folder__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/folder/folder */ "./src/app/pages/folder/folder.ts");
-/* harmony import */ var _pages_post_post__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/post/post */ "./src/app/pages/post/post.ts");
+/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
+/* harmony import */ var angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angular-in-memory-web-api */ "./node_modules/angular-in-memory-web-api/index.js");
+/* harmony import */ var _in_memory_data_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./in-memory-data.service */ "./src/app/in-memory-data.service.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _components_panel_panel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/panel/panel */ "./src/app/components/panel/panel.ts");
+/* harmony import */ var _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/shortcut/shortcut */ "./src/app/components/shortcut/shortcut.ts");
+/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/header/header */ "./src/app/components/header/header.ts");
+/* harmony import */ var _components_directory_directory__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/directory/directory */ "./src/app/components/directory/directory.ts");
+/* harmony import */ var _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/viz/systemic_racism/systemic_racism */ "./src/app/components/viz/systemic_racism/systemic_racism.ts");
+/* harmony import */ var _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/desktop/desktop */ "./src/app/pages/desktop/desktop.ts");
+/* harmony import */ var _pages_folder_folder__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/folder/folder */ "./src/app/pages/folder/folder.ts");
+/* harmony import */ var _pages_post_post__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/post/post */ "./src/app/pages/post/post.ts");
+/* harmony import */ var _pages_about_about__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/about/about */ "./src/app/pages/about/about.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -190,6 +196,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -199,36 +206,38 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__["FlexLayoutModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"],
                 _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
                 _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
                 _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
-                angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_9__["HttpClientInMemoryWebApiModule"].forRoot(_in_memory_data_service__WEBPACK_IMPORTED_MODULE_10__["InMemoryDataService"], {
+                _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["GoogleMapsModule"],
+                angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_10__["HttpClientInMemoryWebApiModule"].forRoot(_in_memory_data_service__WEBPACK_IMPORTED_MODULE_11__["InMemoryDataService"], {
                     dataEncapsulation: false,
                     delay: 300,
                     passThruUnknownUrl: true
                 })
             ],
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
                 /* Components */
-                _components_header_header__WEBPACK_IMPORTED_MODULE_15__["Header"],
-                _components_panel_panel__WEBPACK_IMPORTED_MODULE_13__["Panel"],
-                _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_14__["Shortcut"],
-                _components_directory_directory__WEBPACK_IMPORTED_MODULE_16__["Directory"],
+                _components_header_header__WEBPACK_IMPORTED_MODULE_16__["Header"],
+                _components_panel_panel__WEBPACK_IMPORTED_MODULE_14__["Panel"],
+                _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_15__["Shortcut"],
+                _components_directory_directory__WEBPACK_IMPORTED_MODULE_17__["Directory"],
                 /* Viz */
-                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__["SystemicRacismViz"],
-                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__["SystemicRacismDialog"],
+                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__["SystemicRacismViz"],
+                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__["SystemicRacismDialog"],
                 /* Pages */
-                _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_18__["Desktop"],
-                _pages_folder_folder__WEBPACK_IMPORTED_MODULE_19__["Folder"],
-                _pages_post_post__WEBPACK_IMPORTED_MODULE_20__["Post"],
+                _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_19__["Desktop"],
+                _pages_folder_folder__WEBPACK_IMPORTED_MODULE_20__["Folder"],
+                _pages_post_post__WEBPACK_IMPORTED_MODULE_21__["Post"],
+                _pages_about_about__WEBPACK_IMPORTED_MODULE_22__["About"],
             ],
             //providers: [],
-            entryComponents: [_components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__["SystemicRacismDialog"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
+            entryComponents: [_components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__["SystemicRacismDialog"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -385,7 +394,7 @@ var Header = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".panel {\n    margin: 20px;\n    height: 79%;\n}\n\n.header {\n    color: black;\n    background: #fafafa;\n    padding: 8px;\n    border-radius: 5px 5px 0px 0px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n}\n\n.content {\n    background: white;\n    border-radius: 0px 0px 5px 5px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n    height: 100%;\n}\n\n.close-button {\n    font-family: 'open-sans';\n    background: rgb(252,91,87);\n    min-width: 0px;\n    line-height: 0px;\n    padding: 0px;\n    border-radius: 50%;\n    width: 14px;\n    height: 14px;\n    color: transparent;\n}\n\n.close-button:hover {\n    background-color: rgb(252,91,87);\n    opacity: 1;\n    color: rgb(161,12,18);\n    font-size: 10px;\n}\n\n.close-button:hover ::ng-deep .mat-button-focus-overlay {\n    background-color: transparent;\n}\n\n.fade-in {\n    animation: fadeIn ease .5s;\n    -webkit-animation: fadeIn ease .5s;\n    -moz-animation: fadeIn ease .5s;\n    -o-animation: fadeIn ease .5s;\n    -ms-animation: fadeIn ease .5s;\n}\n\n@keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n\n@-webkit-keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n"
+module.exports = ".panel {\n    margin: 20px;\n    height: 84%;\n}\n\n@media screen and (max-height: 800px) {\n    .panel {\n\theight: 81%;\n    }\n}\n\n.header {\n    color: black;\n    background: #fafafa;\n    padding: 8px;\n    border-radius: 5px 5px 0px 0px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n}\n\n.content {\n    background: white;\n    border-radius: 0px 0px 5px 5px;\n    border: 1px 1px 0px 1px solid rgb(135,127,126);\n    height: 100%;\n    overflow-y: hidden;\n}\n\n.close-button {\n    font-family: 'open-sans';\n    background: rgb(252,91,87);\n    min-width: 0px;\n    line-height: 0px;\n    padding: 0px;\n    border-radius: 50%;\n    width: 14px;\n    height: 14px;\n    color: transparent;\n}\n\n.close-button:hover {\n    background-color: rgb(252,91,87);\n    opacity: 1;\n    color: rgb(161,12,18);\n    font-size: 10px;\n}\n\n.close-button:hover ::ng-deep .mat-button-focus-overlay {\n    background-color: transparent;\n}\n\n.fade-in {\n    animation: fadeIn ease .5s;\n    -webkit-animation: fadeIn ease .5s;\n    -moz-animation: fadeIn ease .5s;\n    -o-animation: fadeIn ease .5s;\n    -ms-animation: fadeIn ease .5s;\n}\n\n@keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n\n@-webkit-keyframes fadeIn {\n    0% {opacity:0;}\n    100% {opacity:1;}\n}\n"
 
 /***/ }),
 
@@ -396,7 +405,7 @@ module.exports = ".panel {\n    margin: 20px;\n    height: 79%;\n}\n\n.header {\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"fade-in panel\">\n  <div\n    class=\"header\"\n    fxLayout=\"row\"\n    fxLayoutAlign=\"space-between center\">\n    <button\n      class=\"close-button\"\n      mat-button\n      (click)=\"goToHomepage()\">\n      ✕</button>\n    <div> BLM </div>\n    <div></div>\n  </div>\n  <div class=\"content\">\n    <ng-content\n      select=\"[content]\"></ng-content>\n  </div>\n</div>\n"
+module.exports = "<div class=\"fade-in panel\">\n  <div\n    class=\"header\"\n    fxLayout=\"row\"\n    fxLayoutAlign=\"space-between center\">\n    <button\n      class=\"close-button\"\n      mat-button\n      (click)=\"goToHomepage()\">\n      ✕</button>\n    <div> {{name}} </div>\n    <div></div>\n  </div>\n  <div class=\"content\">\n    <ng-content\n      select=\"[content]\"></ng-content>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -430,6 +439,10 @@ var Panel = /** @class */ (function () {
     Panel.prototype.goToHomepage = function () {
         this.router.navigate(['']);
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        __metadata("design:type", String)
+    ], Panel.prototype, "name", void 0);
     Panel = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'panel',
@@ -463,7 +476,7 @@ module.exports = ".tile {\n    margin: 20px;\n    width: 100px;\n    height: 120
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<button\n  class=\"tile\"\n  fxLayout=\"col\"\n  fxLayoutAlign=\"center\"\n  mat-button (click)=\"goToShortcut()\">\n  <div>\n    <img\n      *ngIf=\"fileType === FileType.Folder\"\n      src=\"../../assets/folder.png\"/>\n  </div>\n  <div fxLayout=\"row\" fxLayoutAlign=\"center\">{{name}}</div>\n</button>\n\n"
+module.exports = "<button\n  class=\"tile\"\n  fxLayout=\"col\"\n  fxLayoutAlign=\"center\"\n  mat-button (click)=\"goToShortcut()\">\n  <div>\n    <img\n      *ngIf=\"fileType === FileType.Folder\"\n      src=\"../../assets/folder.png\"/>\n    <img\n      *ngIf=\"fileType === FileType.About\"\n      src=\"../../assets/about.png\"/>\n  </div>\n  <div fxLayout=\"row\" fxLayoutAlign=\"center\">{{name}}</div>\n</button>\n\n"
 
 /***/ }),
 
@@ -498,7 +511,14 @@ var Shortcut = /** @class */ (function () {
         this.FileType = _interfaces_file__WEBPACK_IMPORTED_MODULE_2__["FileType"];
     }
     Shortcut.prototype.goToShortcut = function () {
-        var link = [this.fileType, this.id];
+        var link;
+        if (this.fileType === _interfaces_file__WEBPACK_IMPORTED_MODULE_2__["FileType"].Folder
+            || this.fileType === _interfaces_file__WEBPACK_IMPORTED_MODULE_2__["FileType"].Post) {
+            link = [this.fileType, this.id];
+        }
+        else {
+            link = [this.fileType];
+        }
         this.router.navigate(link);
     };
     __decorate([
@@ -754,7 +774,7 @@ var DETAILS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\nh1.mat-dialog-title {\n    max-height: 65px;\n    overflow: scroll;\n}\n\ndiv.mat-dialog-content {\n    max-height: 200px;\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n"
+module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\nh1.mat-dialog-title {\n    max-height: 65px;\n}\n\ndiv.mat-dialog-content {\n    max-height: 200px;\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n\n.x-button {\n    width: 10px;\n    min-width: 10px;\n    padding: 0px 22px 0px 16px;\n}\n\n@media screen and (max-width: 840px) {\n    h1.mat-dialog-title {\n\toverflow: scroll;\n    }\n}\n"
 
 /***/ }),
 
@@ -765,7 +785,7 @@ module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title #matDialogTitle>\n    {{data.events[blockIndex].details.title}}\n    <span *ngIf=\"data.events[blockIndex].details.year > 1\">\n    {{data.events[blockIndex].details.year}}</span></h1>\n  <div mat-dialog-content #matDialogContent>\n    <p>{{data.events[blockIndex].details.body}}</p>\n  </div>\n  <div mat-dialog-actions>\n    <div class=\"citations-container\">\n      <ng-container\n\t*ngFor=\"let citation of data.events[blockIndex].details.citations;\n\t\tlet i = index\">\n\t<span *ngIf=\"i===0\">Citations:&nbsp;</span>\n\t<span fxHide.lt-md>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{citation.source}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n\t<span fxHide.gt-sm>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{i+1}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n      </ng-container>\n    </div>\n    <div class=\"button-container\">\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === 0\"\n\t(click)=\"onPrevious()\">Previous</button>\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === data.events.length - 1 ||\n\t\t    blockIndex === data.totalBlocks - 1\"\n\t(click)=\"onNext()\">Next</button>\n      <button mat-button fxHide.lt-md (click)=\"onClose()\">Close</button>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title #matDialogTitle>\n    {{data.events[blockIndex].details.title}}\n    <span *ngIf=\"data.events[blockIndex].details.year > 1\">\n    {{data.events[blockIndex].details.year}}</span></h1>\n  <div mat-dialog-content #matDialogContent>\n    <p>{{data.events[blockIndex].details.body}}</p>\n  </div>\n  <div mat-dialog-actions>\n    <div class=\"citations-container\">\n      <ng-container\n\t*ngFor=\"let citation of data.events[blockIndex].details.citations;\n\t\tlet i = index\">\n\t<span *ngIf=\"i===0\">Citations:&nbsp;</span>\n\t<span fxHide.lt-md>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{citation.source}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n\t<span fxHide.gt-sm>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{i+1}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n      </ng-container>\n    </div>\n    <div class=\"button-container\">\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === 0\"\n\t(click)=\"onPrevious()\">Previous</button>\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === data.events.length - 1 ||\n\t\t    blockIndex === data.totalBlocks - 1\"\n\t(click)=\"onNext()\">Next</button>\n      <button mat-button fxHide.xs (click)=\"onClose()\">Close</button>\n      <button class=\"x-button\" mat-button fxHide.gt-xs (click)=\"onClose()\">x</button>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1071,7 +1091,81 @@ var FileType;
     FileType["Folder"] = "folder";
     FileType["Terminal"] = "terminal";
     FileType["Post"] = "post";
+    FileType["About"] = "about";
 })(FileType || (FileType = {}));
+
+
+/***/ }),
+
+/***/ "./src/app/pages/about/about.css":
+/*!***************************************!*\
+  !*** ./src/app/pages/about/about.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/about/about.ng.html":
+/*!*******************************************!*\
+  !*** ./src/app/pages/about/about.ng.html ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/about/about.ts":
+/*!**************************************!*\
+  !*** ./src/app/pages/about/about.ts ***!
+  \**************************************/
+/*! exports provided: About */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "About", function() { return About; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var About = /** @class */ (function () {
+    function About() {
+        this.latitude = 18.5204;
+        this.longitude = 73.8567;
+    }
+    About.prototype.ngOnInit = function () {
+        this.map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([this.longitude, this.latitude]),
+                zoom: 8,
+            })
+        });
+    };
+    About = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'about',
+            template: __webpack_require__(/*! ./about.ng.html */ "./src/app/pages/about/about.ng.html"),
+            styles: [__webpack_require__(/*! ./about.css */ "./src/app/pages/about/about.css")]
+        })
+    ], About);
+    return About;
+}());
+
 
 
 /***/ }),
@@ -1083,7 +1177,7 @@ var FileType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <shortcut\n    [name]=\"'BLM'\"\n    [fileType]=\"FileType.Folder\"\n    [id]=\"1\">\n  </shortcut>\n</div>\n"
+module.exports = "<div fxLayout=\"row\">\n  <shortcut\n    [name]=\"'BLM'\"\n    [fileType]=\"FileType.Folder\"\n    [id]=\"1\">\n  </shortcut>\n  <shortcut\n    [name]=\"'About'\"\n    [fileType]=\"FileType.About\"\n    [id]=\"2\">\n  </shortcut>\n</div>\n"
 
 /***/ }),
 
@@ -1098,31 +1192,24 @@ module.exports = "<div>\n  <shortcut\n    [name]=\"'BLM'\"\n    [fileType]=\"Fil
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Desktop", function() { return Desktop; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _interfaces_file__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../interfaces/file */ "./src/app/interfaces/file.ts");
+/* harmony import */ var _interfaces_file__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../interfaces/file */ "./src/app/interfaces/file.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
 
 
 var Desktop = /** @class */ (function () {
-    function Desktop(router) {
-        this.router = router;
-        this.FileType = _interfaces_file__WEBPACK_IMPORTED_MODULE_2__["FileType"];
+    function Desktop() {
+        this.FileType = _interfaces_file__WEBPACK_IMPORTED_MODULE_1__["FileType"];
     }
     Desktop = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'desktop',
             template: __webpack_require__(/*! ./desktop.ng.html */ "./src/app/pages/desktop/desktop.ng.html"),
-        }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+        })
     ], Desktop);
     return Desktop;
 }());
@@ -1138,7 +1225,7 @@ var Desktop = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<panel>\n  <directory content></directory>\n</panel>\n"
+module.exports = "<panel [name]=\"'BLM'\">\n  <directory content></directory>\n</panel>\n"
 
 /***/ }),
 
