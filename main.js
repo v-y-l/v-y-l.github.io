@@ -774,7 +774,7 @@ var DETAILS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\nh1.mat-dialog-title {\n    max-height: 65px;\n}\n\ndiv.mat-dialog-content {\n    max-height: 200px;\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n\n.x-button {\n    width: 10px;\n    min-width: 10px;\n    padding: 0px 22px 0px 16px;\n}\n\n@media screen and (max-width: 840px) {\n    h1.mat-dialog-title {\n\toverflow: scroll;\n    }\n}\n"
+module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\nh1.mat-dialog-title {\n    max-height: 65px;\n}\n\ndiv.mat-dialog-content {\n    max-height: 200px;\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n\n@media screen and (max-width: 840px) {\n    h1.mat-dialog-title {\n\toverflow: scroll;\n    }\n}\n"
 
 /***/ }),
 
@@ -785,7 +785,7 @@ module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title #matDialogTitle>\n    {{data.events[blockIndex].details.title}}\n    <span *ngIf=\"data.events[blockIndex].details.year > 1\">\n    {{data.events[blockIndex].details.year}}</span></h1>\n  <div mat-dialog-content #matDialogContent>\n    <p>{{data.events[blockIndex].details.body}}</p>\n  </div>\n  <div mat-dialog-actions>\n    <div class=\"citations-container\">\n      <ng-container\n\t*ngFor=\"let citation of data.events[blockIndex].details.citations;\n\t\tlet i = index\">\n\t<span *ngIf=\"i===0\">Citations:&nbsp;</span>\n\t<span fxHide.lt-md>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{citation.source}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n\t<span fxHide.gt-sm>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{i+1}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n      </ng-container>\n    </div>\n    <div class=\"button-container\">\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === 0\"\n\t(click)=\"onPrevious()\">Previous</button>\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === data.events.length - 1 ||\n\t\t    blockIndex === data.totalBlocks - 1\"\n\t(click)=\"onNext()\">Next</button>\n      <button mat-button fxHide.xs (click)=\"onClose()\">Close</button>\n      <button class=\"x-button\" mat-button fxHide.gt-xs (click)=\"onClose()\">x</button>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title #matDialogTitle>\n    {{data.events[blockIndex].details.title}}\n    <span *ngIf=\"data.events[blockIndex].details.year > 1\">\n    {{data.events[blockIndex].details.year}}</span></h1>\n  <div mat-dialog-content #matDialogContent>\n    <p>{{data.events[blockIndex].details.body}}</p>\n  </div>\n  <div mat-dialog-actions>\n    <div class=\"citations-container\">\n      <ng-container\n\t*ngFor=\"let citation of data.events[blockIndex].details.citations;\n\t\tlet i = index\">\n\t<span *ngIf=\"i===0\">Citations:&nbsp;</span>\n\t<span fxHide.lt-md>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{citation.source}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n\t<span fxHide.gt-sm>\n\t  <a [href]=\"citation.link\"\n\t     target=\"_blank\">{{i+1}}</a>\n\t  <span class=\"separator\"\n\t\t*ngIf=\"i < data.events[blockIndex].details.citations.length - 1\">,&nbsp;</span>\n\t</span>\n      </ng-container>\n    </div>\n    <div class=\"button-container\">\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === 0\"\n\t(click)=\"onPrevious()\">Previous</button>\n      <button\n\tmat-button\n\t[disabled]=\"blockIndex === data.events.length - 1 ||\n\t\t    blockIndex === data.totalBlocks - 1\"\n\t(click)=\"onNext()\">Next</button>\n      <button mat-button fxHide.xs (click)=\"onClose()\">Close</button>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1139,8 +1139,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var About = /** @class */ (function () {
     function About() {
-        this.latitude = 18.5204;
-        this.longitude = 73.8567;
+        this.latitude = 25.08580655;
+        this.longitude = 121.56435563960218;
     }
     About.prototype.ngOnInit = function () {
         this.map = new ol.Map({
@@ -1155,6 +1155,21 @@ var About = /** @class */ (function () {
                 zoom: 8,
             })
         });
+        this.addMarker();
+    };
+    About.prototype.addMarker = function () {
+        var layer = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([
+                            this.longitude, this.latitude
+                        ]))
+                    })
+                ]
+            })
+        });
+        this.map.addLayer(layer);
     };
     About = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
