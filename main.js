@@ -153,27 +153,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
-/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
-/* harmony import */ var angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angular-in-memory-web-api */ "./node_modules/angular-in-memory-web-api/index.js");
-/* harmony import */ var _in_memory_data_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./in-memory-data.service */ "./src/app/in-memory-data.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _components_panel_panel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/panel/panel */ "./src/app/components/panel/panel.ts");
-/* harmony import */ var _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/shortcut/shortcut */ "./src/app/components/shortcut/shortcut.ts");
-/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/header/header */ "./src/app/components/header/header.ts");
-/* harmony import */ var _components_directory_directory__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/directory/directory */ "./src/app/components/directory/directory.ts");
-/* harmony import */ var _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/viz/systemic_racism/systemic_racism */ "./src/app/components/viz/systemic_racism/systemic_racism.ts");
-/* harmony import */ var _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/desktop/desktop */ "./src/app/pages/desktop/desktop.ts");
-/* harmony import */ var _pages_folder_folder__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/folder/folder */ "./src/app/pages/folder/folder.ts");
-/* harmony import */ var _pages_post_post__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/post/post */ "./src/app/pages/post/post.ts");
-/* harmony import */ var _pages_about_about__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/about/about */ "./src/app/pages/about/about.ts");
+/* harmony import */ var angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angular-in-memory-web-api */ "./node_modules/angular-in-memory-web-api/index.js");
+/* harmony import */ var _in_memory_data_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./in-memory-data.service */ "./src/app/in-memory-data.service.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _components_panel_panel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/panel/panel */ "./src/app/components/panel/panel.ts");
+/* harmony import */ var _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/shortcut/shortcut */ "./src/app/components/shortcut/shortcut.ts");
+/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/header/header */ "./src/app/components/header/header.ts");
+/* harmony import */ var _components_directory_directory__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/directory/directory */ "./src/app/components/directory/directory.ts");
+/* harmony import */ var _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/viz/systemic_racism/systemic_racism */ "./src/app/components/viz/systemic_racism/systemic_racism.ts");
+/* harmony import */ var _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/desktop/desktop */ "./src/app/pages/desktop/desktop.ts");
+/* harmony import */ var _pages_folder_folder__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/folder/folder */ "./src/app/pages/folder/folder.ts");
+/* harmony import */ var _pages_post_post__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/post/post */ "./src/app/pages/post/post.ts");
+/* harmony import */ var _pages_about_about__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/about/about */ "./src/app/pages/about/about.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -206,38 +204,37 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__["FlexLayoutModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_13__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"],
                 _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
                 _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
                 _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialogModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
-                _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["GoogleMapsModule"],
-                angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_10__["HttpClientInMemoryWebApiModule"].forRoot(_in_memory_data_service__WEBPACK_IMPORTED_MODULE_11__["InMemoryDataService"], {
+                angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_9__["HttpClientInMemoryWebApiModule"].forRoot(_in_memory_data_service__WEBPACK_IMPORTED_MODULE_10__["InMemoryDataService"], {
                     dataEncapsulation: false,
                     delay: 300,
                     passThruUnknownUrl: true
                 })
             ],
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
                 /* Components */
-                _components_header_header__WEBPACK_IMPORTED_MODULE_16__["Header"],
-                _components_panel_panel__WEBPACK_IMPORTED_MODULE_14__["Panel"],
-                _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_15__["Shortcut"],
-                _components_directory_directory__WEBPACK_IMPORTED_MODULE_17__["Directory"],
+                _components_header_header__WEBPACK_IMPORTED_MODULE_15__["Header"],
+                _components_panel_panel__WEBPACK_IMPORTED_MODULE_13__["Panel"],
+                _components_shortcut_shortcut__WEBPACK_IMPORTED_MODULE_14__["Shortcut"],
+                _components_directory_directory__WEBPACK_IMPORTED_MODULE_16__["Directory"],
                 /* Viz */
-                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__["SystemicRacismViz"],
-                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__["SystemicRacismDialog"],
+                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__["SystemicRacismViz"],
+                _components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__["SystemicRacismDialog"],
                 /* Pages */
-                _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_19__["Desktop"],
-                _pages_folder_folder__WEBPACK_IMPORTED_MODULE_20__["Folder"],
-                _pages_post_post__WEBPACK_IMPORTED_MODULE_21__["Post"],
-                _pages_about_about__WEBPACK_IMPORTED_MODULE_22__["About"],
+                _pages_desktop_desktop__WEBPACK_IMPORTED_MODULE_18__["Desktop"],
+                _pages_folder_folder__WEBPACK_IMPORTED_MODULE_19__["Folder"],
+                _pages_post_post__WEBPACK_IMPORTED_MODULE_20__["Post"],
+                _pages_about_about__WEBPACK_IMPORTED_MODULE_21__["About"],
             ],
             //providers: [],
-            entryComponents: [_components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_18__["SystemicRacismDialog"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
+            entryComponents: [_components_viz_systemic_racism_systemic_racism__WEBPACK_IMPORTED_MODULE_17__["SystemicRacismDialog"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -825,7 +822,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data */ "./src/app/components/viz/systemic_racism/data.ts");
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -838,7 +834,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-
 
 
 
@@ -865,19 +860,19 @@ var SystemicRacismViz = /** @class */ (function () {
         this.details = _data__WEBPACK_IMPORTED_MODULE_2__["DETAILS"];
     }
     SystemicRacismViz.prototype.ngAfterViewInit = function () {
-        this.svgContainer = d3__WEBPACK_IMPORTED_MODULE_3__["select"]("svg.viz");
+        this.svgContainer = d3.select("svg.viz");
         this.svgWidth = parseInt(this.svgContainer.style("width"));
         this.svgHeight = parseInt(this.svgContainer.style("height"));
         this.initializeData();
         /** https://mathiasbynens.be/notes/settimeout-onload */
         setTimeout(this.initializeViz.bind(this), 0);
-        d3__WEBPACK_IMPORTED_MODULE_3__["select"](window).on('resize', this.resizeBlocks.bind(this));
+        d3.select(window).on('resize', this.resizeBlocks.bind(this));
     };
     // Function to call when the page gets resized
     SystemicRacismViz.prototype.resizeBlocks = function () {
         var heightRatio = parseInt(this.svgContainer.style("height")) / this.svgHeight;
         var widthRatio = parseInt(this.svgContainer.style("width")) / this.svgWidth;
-        d3__WEBPACK_IMPORTED_MODULE_3__["selectAll"]("rect")
+        d3.selectAll("rect")
             .attr("height", this.BLOCK_HEIGHT * heightRatio)
             .attr("width", this.BLOCK_WIDTH * widthRatio)
             .attr("x", function (d) { return d.x * widthRatio; })
@@ -961,12 +956,12 @@ var SystemicRacismViz = /** @class */ (function () {
     };
     // Change the color of the rectangle when you hover over it
     SystemicRacismViz.prototype.handleMouseOver = function (d, i) {
-        d3__WEBPACK_IMPORTED_MODULE_3__["select"](this)
+        d3.select(this)
             .attr("fill", "red")
             .style("cursor", "pointer");
     };
     SystemicRacismViz.prototype.handleMouseOut = function (d, i) {
-        d3__WEBPACK_IMPORTED_MODULE_3__["select"](this).attr("fill", "black");
+        d3.select(this).attr("fill", "black");
     };
     SystemicRacismViz.prototype.openDialog = function (d, i) {
         var dialogRef = this.dialog.open(SystemicRacismDialog, {
@@ -1162,9 +1157,7 @@ var About = /** @class */ (function () {
             source: new ol.source.Vector({
                 features: [
                     new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([
-                            this.longitude, this.latitude
-                        ]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([this.longitude, this.latitude]))
                     })
                 ]
             })
