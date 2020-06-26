@@ -462,7 +462,7 @@ var Panel = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".tile {\n    margin: 20px;\n    width: 100px;\n    height: 120px;\n    padding: 25px;\n    border: 1px solid transparent;\n    background: transparent;\n    border-radius: 8px;\n    line-height: 20px;\n    color: white;\n}\n\n.tile:hover {\n    background: #a7a7a773;\n}\n"
+module.exports = ".tile {\n    margin: 20px;\n    width: 100px;\n    height: 120px;\n    padding: 25px;\n    border: 1px solid transparent;\n    background: transparent;\n    border-radius: 8px;\n    line-height: 20px;\n    color: white;\n}\n\n.tile:hover {\n    background: #a7a7a773;\n}\n\nimg {\n    width: 48px;\n    height: 48px;\n}\n"
 
 /***/ }),
 
@@ -793,7 +793,7 @@ module.exports = "<div class=\"dialog-container\">\n  <h1 mat-dialog-title #matD
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\nh3 {\n   font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\n@media screen and (max-width: 840px) {\n    .viz {\n\theight: 65%;\n    }\n}\n\n@media screen and (max-width: 375px) {\n    .viz {\n\theight: 55%;\n    }\n}\n\n@media screen and (max-width: 340px) {\n    .viz {\n\theight: 45%;\n    }\n}\n"
+module.exports = ".viz {\n    width: 100%;\n    height: 75%;\n}\n\nh1 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 18px 10px 0px 50px;\n}\n\nh1 span {\n    color: red;\n}\n\nh2 {\n    color: black;\n    font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\nh3 {\n   font-family: 'open-sans-light';\n    margin: 0;\n    padding: 10px 10px 5px 50px;\n}\n\n@media screen and (max-width: 840px) {\n    .viz {\n\theight: 65%;\n    }\n}\n\n@media screen and (max-width: 375px) {\n    .viz {\n\theight: 58%;\n    }\n}\n\n@media screen and (max-width: 340px) {\n    .viz {\n\theight: 50%;\n    }\n}\n"
 
 /***/ }),
 
@@ -1278,7 +1278,7 @@ var Folder = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<panel>\n  <systemic-racism-viz content></systemic-racism-viz>\n</panel>\n"
+module.exports = "<panel [name]=\"'BLM'\">\n  <systemic-racism-viz content></systemic-racism-viz>\n</panel>\n"
 
 /***/ }),
 
