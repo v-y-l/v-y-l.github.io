@@ -1105,7 +1105,7 @@ var FileType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n"
+module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n\n.button-container {\n    margin-top: 5px;\n}\n"
 
 /***/ }),
 
@@ -1116,7 +1116,7 @@ module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      {{points[pointIndex].title}}: {{points[pointIndex].description}}\n      <button mat-button [disabled]=\"pointIndex === 0\"\n\t      (click)=\"onPrevious()\">Previous</button>\n      <button mat-button [disabled]=\"pointIndex === points.length - 1\"\n\t      (click)=\"onNext()\">Next</button>\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
+module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      <div>\n\t<b>{{points[pointIndex].title}}.</b> {{points[pointIndex].description}}\n      </div>\n      <div class=\"button-container\" fxLayout=\"row-reverse\">\n\t<button mat-button [disabled]=\"pointIndex === points.length - 1\"\n\t\t(click)=\"onNext()\">Next</button>\n\t<button mat-button [disabled]=\"pointIndex === 0\"\n\t\t(click)=\"onPrevious()\">Previous</button>\n      </div>\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
 
 /***/ }),
 
@@ -1150,6 +1150,7 @@ var About = /** @class */ (function () {
     }
     About.prototype.ngAfterViewInit = function () {
         var position = this.getCurrentPosition();
+        var zoom = this.getCurrentZoom();
         var overlay = new ol.control.Control({
             element: this.aboutBox.nativeElement,
         });
@@ -1163,7 +1164,7 @@ var About = /** @class */ (function () {
             controls: [overlay],
             view: new ol.View({
                 center: position,
-                zoom: 7,
+                zoom: zoom,
             })
         });
     };
@@ -1171,22 +1172,26 @@ var About = /** @class */ (function () {
         return ol.proj.fromLonLat([this.points[this.pointIndex].longitude,
             this.points[this.pointIndex].latitude]);
     };
+    About.prototype.getCurrentZoom = function () {
+        return this.points[this.pointIndex].zoom;
+    };
     About.prototype.onPrevious = function () {
         this.pointIndex -= 1;
         var position = this.getCurrentPosition();
-        this.flyTo(position);
+        var zoom = this.getCurrentZoom();
+        this.flyTo(position, zoom);
     };
     About.prototype.onNext = function () {
         this.pointIndex += 1;
         var position = this.getCurrentPosition();
-        this.flyTo(position);
+        var zoom = this.getCurrentZoom();
+        this.flyTo(position, zoom);
     };
-    About.prototype.flyTo = function (position) {
+    About.prototype.flyTo = function (position, zoom) {
         var view = this.map.getView();
-        var zoom = view.getZoom();
         var duration = 500;
         view.animate({
-            zoom: 6,
+            zoom: zoom,
             center: position,
         });
     };
@@ -1222,14 +1227,30 @@ var POINTS = [
     {
         latitude: 49.1783514,
         longitude: -123.2764278,
+        zoom: 8,
         title: 'Richmond, Canada',
-        description: 'This is were I was born.',
+        description: 'I was born here. My mom immigrated here right before the Third Taiwan Strait Crisis.',
     },
     {
         latitude: 23.8629809,
         longitude: 121.16388,
+        zoom: 6,
         title: 'Taipei, Taiwan',
-        description: 'This is were I spent my years up until high school.',
+        description: 'I moved back to Taiwan as a toddler and spent my first 18 years here.',
+    },
+    {
+        latitude: 33.7676334,
+        longitude: -84.56103223,
+        zoom: 6,
+        title: 'Atlanta, Georgia',
+        description: 'I went to Georgia Tech for undergrad.',
+    },
+    {
+        latitude: 42.3142643,
+        longitude: -71.110711,
+        zoom: 6,
+        title: 'Boston, Massachussetts',
+        description: 'I moved to Boston for work after I graduated.',
     },
 ];
 
