@@ -1099,7 +1099,7 @@ var FileType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n"
+module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 84%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n"
 
 /***/ }),
 
@@ -1110,7 +1110,7 @@ module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
+module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      I was born in Richmond, Canada. I then spent the first 18 years of my life in Taipei, before moving to Atlanta in college. Post graduation, I moved to Boston for work.\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
 
 /***/ }),
 
@@ -1131,13 +1131,20 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 var About = /** @class */ (function () {
     function About() {
-        this.latitude = 25.08580655;
-        this.longitude = 121.56435563960218;
+        this.latitude = 23.8629809;
+        this.longitude = 121.16388;
     }
-    About.prototype.ngOnInit = function () {
+    About.prototype.ngAfterViewInit = function () {
+        var position = ol.proj.fromLonLat([this.longitude, this.latitude]);
+        var overlay = new ol.control.Control({
+            element: this.aboutBox.nativeElement,
+        });
         this.map = new ol.Map({
             target: 'map',
             layers: [
@@ -1145,9 +1152,10 @@ var About = /** @class */ (function () {
                     source: new ol.source.OSM()
                 })
             ],
+            controls: [overlay],
             view: new ol.View({
-                center: ol.proj.fromLonLat([this.longitude, this.latitude]),
-                zoom: 8,
+                center: position,
+                zoom: 7,
             })
         });
         this.addMarker();
@@ -1164,6 +1172,10 @@ var About = /** @class */ (function () {
         });
         this.map.addLayer(layer);
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('aboutBox'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], About.prototype, "aboutBox", void 0);
     About = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'about',
