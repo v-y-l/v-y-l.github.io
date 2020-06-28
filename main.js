@@ -342,7 +342,7 @@ module.exports = ".header {\n    background: rgb(34,34,34);\n    width: 100%;\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end center\"\n     class=\"header\">\n  <img\n    class=\"icon\"\n    src=\"../../assets/linkedin.png\"\n    (click)=\"goToLinkedIn()\" />\n  <img\n    class=\"icon\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
+module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end center\"\n     class=\"header\">\n  <img\n    class=\"icon\"\n    src=\"../../assets/resume.png\"\n    (click)=\"goToResume()\" />\n  <img\n    class=\"icon\"\n    src=\"../../assets/linkedin.png\"\n    (click)=\"goToLinkedIn()\" />\n  <img\n    class=\"icon\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
 
 /***/ }),
 
@@ -372,6 +372,9 @@ var Header = /** @class */ (function () {
     };
     Header.prototype.goToLinkedIn = function () {
         window.open('https://www.linkedin.com/in/vyl/');
+    };
+    Header.prototype.goToResume = function () {
+        window.open('https://drive.google.com/file/d/1GOkKzzs57FJ3fCZod4F-50rDRfbeO-T4/view?usp=sharing');
     };
     Header = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
