@@ -331,7 +331,7 @@ var Directory = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n    background: rgb(34,34,34);\n    width: 100%;\n    padding: 8px 20px 8px 20px;\n}\n\n.header .user {\n    font-family: 'open-sans-bold';\n    color: white;\n}\n\n.twitter {\n    width: 22px;\n    height: 22px;\n    cursor: pointer;\n}\n"
+module.exports = ".header {\n    background: rgb(34,34,34);\n    width: 100%;\n    padding: 8px 20px 8px 20px;\n}\n\n.header .user {\n    font-family: 'open-sans-bold';\n    color: white;\n}\n\n.icon {\n    width: 22px;\n    height: 22px;\n    cursor: pointer;\n}\n"
 
 /***/ }),
 
@@ -342,7 +342,7 @@ module.exports = ".header {\n    background: rgb(34,34,34);\n    width: 100%;\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end center\"\n     class=\"header\">\n  <img\n    class=\"twitter\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
+module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end center\"\n     class=\"header\">\n  <img\n    class=\"icon\"\n    src=\"../../assets/linkedin.png\"\n    (click)=\"goToLinkedIn()\" />\n  <img\n    class=\"icon\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
 
 /***/ }),
 
@@ -369,6 +369,9 @@ var Header = /** @class */ (function () {
     }
     Header.prototype.goToTwitter = function () {
         window.open('https://twitter.com/vlinvlin6');
+    };
+    Header.prototype.goToLinkedIn = function () {
+        window.open('https://www.linkedin.com/in/vyl/');
     };
     Header = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1099,7 +1102,7 @@ var FileType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 84%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n"
+module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n"
 
 /***/ }),
 
@@ -1110,7 +1113,7 @@ module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      I was born in Richmond, Canada. I then spent the first 18 years of my life in Taipei, before moving to Atlanta in college. Post graduation, I moved to Boston for work.\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
+module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      {{points[pointIndex].title}}: {{points[pointIndex].description}}\n      <button mat-button [disabled]=\"pointIndex === 0\"\n\t      (click)=\"onPrevious()\">Previous</button>\n      <button mat-button [disabled]=\"pointIndex === points.length - 1\"\n\t      (click)=\"onNext()\">Next</button>\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
 
 /***/ }),
 
@@ -1125,6 +1128,7 @@ module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "About", function() { return About; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data */ "./src/app/pages/about/data.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1135,13 +1139,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var About = /** @class */ (function () {
     function About() {
-        this.latitude = 23.8629809;
-        this.longitude = 121.16388;
+        this.points = _data__WEBPACK_IMPORTED_MODULE_1__["POINTS"];
+        this.pointIndex = 0;
     }
     About.prototype.ngAfterViewInit = function () {
-        var position = ol.proj.fromLonLat([this.longitude, this.latitude]);
+        var position = this.getCurrentPosition();
         var overlay = new ol.control.Control({
             element: this.aboutBox.nativeElement,
         });
@@ -1158,19 +1163,29 @@ var About = /** @class */ (function () {
                 zoom: 7,
             })
         });
-        this.addMarker();
     };
-    About.prototype.addMarker = function () {
-        var layer = new ol.layer.Vector({
-            source: new ol.source.Vector({
-                features: [
-                    new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([this.longitude, this.latitude]))
-                    })
-                ]
-            })
+    About.prototype.getCurrentPosition = function () {
+        return ol.proj.fromLonLat([this.points[this.pointIndex].longitude,
+            this.points[this.pointIndex].latitude]);
+    };
+    About.prototype.onPrevious = function () {
+        this.pointIndex -= 1;
+        var position = this.getCurrentPosition();
+        this.flyTo(position);
+    };
+    About.prototype.onNext = function () {
+        this.pointIndex += 1;
+        var position = this.getCurrentPosition();
+        this.flyTo(position);
+    };
+    About.prototype.flyTo = function (position) {
+        var view = this.map.getView();
+        var zoom = view.getZoom();
+        var duration = 500;
+        view.animate({
+            zoom: 6,
+            center: position,
         });
-        this.map.addLayer(layer);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('aboutBox'),
@@ -1186,6 +1201,34 @@ var About = /** @class */ (function () {
     return About;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/pages/about/data.ts":
+/*!*************************************!*\
+  !*** ./src/app/pages/about/data.ts ***!
+  \*************************************/
+/*! exports provided: POINTS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POINTS", function() { return POINTS; });
+var POINTS = [
+    {
+        latitude: 49.1783514,
+        longitude: -123.2764278,
+        title: 'Richmond, Canada',
+        description: 'This is were I was born.',
+    },
+    {
+        latitude: 23.8629809,
+        longitude: 121.16388,
+        title: 'Taipei, Taiwan',
+        description: 'This is were I spent my years up until high school.',
+    },
+];
 
 
 /***/ }),
