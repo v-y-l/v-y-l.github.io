@@ -1266,7 +1266,7 @@ var POINTS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row wrap\">\n  <shortcut\n    [name]=\"'About'\"\n    [fileType]=\"FileType.About\"\n    [id]=\"2\">\n  </shortcut>\n  <shortcut\n    [name]=\"'BLM'\"\n    [fileType]=\"FileType.Folder\"\n    [id]=\"1\">\n  </shortcut>\n  <shortcut\n    [name]=\"'Resume'\"\n    [fileType]=\"FileType.Resume\"\n    [id]=\"-1\">\n  </shortcut>\n</div>\n"
+module.exports = "<div fxLayout=\"row wrap\">\n  <shortcut\n    [name]=\"'About me'\"\n    [fileType]=\"FileType.About\"\n    [id]=\"2\">\n  </shortcut>\n  <shortcut\n    [name]=\"'BLM'\"\n    [fileType]=\"FileType.Folder\"\n    [id]=\"1\">\n  </shortcut>\n  <shortcut\n    [name]=\"'Resume'\"\n    [fileType]=\"FileType.Resume\"\n    [id]=\"-1\">\n  </shortcut>\n</div>\n"
 
 /***/ }),
 
