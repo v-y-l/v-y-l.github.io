@@ -342,7 +342,7 @@ module.exports = ".header {\n    background: rgb(34,34,34);\n    width: 100%;\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end center\"\n     class=\"header\">\n  <img\n    class=\"icon\"\n    src=\"../../assets/resume.png\"\n    (click)=\"goToResume()\" />\n  <img\n    class=\"icon\"\n    src=\"../../assets/linkedin.png\"\n    (click)=\"goToLinkedIn()\" />\n  <img\n    class=\"icon\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
+module.exports = "<div fxLayout=\"row\"\n     fxLayoutGap=\"15px\"\n     fxLayoutAlign=\"end center\"\n     class=\"header\">\n  <img\n    class=\"icon\"\n    src=\"../../assets/linkedin.png\"\n    (click)=\"goToLinkedIn()\" />\n  <img\n    class=\"icon\"\n    src=\"../../assets/twitter.png\"\n    (click)=\"goToTwitter()\" />\n  <span class=\"user\">Victor Lin</span>\n</div>\n"
 
 /***/ }),
 
@@ -372,9 +372,6 @@ var Header = /** @class */ (function () {
     };
     Header.prototype.goToLinkedIn = function () {
         window.open('https://www.linkedin.com/in/vyl/');
-    };
-    Header.prototype.goToResume = function () {
-        window.open('https://drive.google.com/file/d/1GOkKzzs57FJ3fCZod4F-50rDRfbeO-T4/view?usp=sharing');
     };
     Header = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -468,7 +465,7 @@ var Panel = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".tile {\n    margin: 20px;\n    width: 100px;\n    height: 120px;\n    padding: 25px;\n    border: 1px solid transparent;\n    background: transparent;\n    border-radius: 8px;\n    line-height: 20px;\n    color: white;\n}\n\n.tile:hover {\n    background: #a7a7a773;\n}\n\nimg {\n    width: 48px;\n    height: 48px;\n}\n"
+module.exports = ".tile {\n    display: block;\n    margin: 20px;\n    width: 100px;\n    height: 120px;\n    padding: 25px;\n    border: 1px solid transparent;\n    background: transparent;\n    border-radius: 8px;\n    line-height: 20px;\n    color: white;\n}\n\n.tile:hover {\n    background: #a7a7a773;\n}\n\nimg {\n    width: 48px;\n    height: 48px;\n}\n"
 
 /***/ }),
 
@@ -479,7 +476,7 @@ module.exports = ".tile {\n    margin: 20px;\n    width: 100px;\n    height: 120
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<button\n  class=\"tile\"\n  fxLayout=\"col\"\n  fxLayoutAlign=\"center\"\n  mat-button (click)=\"goToShortcut()\">\n  <div>\n    <img\n      *ngIf=\"fileType === FileType.Folder\"\n      src=\"../../assets/folder.png\"/>\n    <img\n      *ngIf=\"fileType === FileType.About\"\n      src=\"../../assets/about.png\"/>\n  </div>\n  <div fxLayout=\"row\" fxLayoutAlign=\"center\">{{name}}</div>\n</button>\n\n"
+module.exports = "<button\n  class=\"tile\"\n  fxLayout=\"col\"\n  fxLayoutAlign=\"center\"\n  mat-button (click)=\"goToShortcut()\">\n  <div>\n    <img\n      *ngIf=\"fileType === FileType.About\"\n      src=\"../../assets/about.png\"/>\n    <img\n      *ngIf=\"fileType === FileType.Folder\"\n      src=\"../../assets/folder.png\"/>\n    <img\n      *ngIf=\"fileType === FileType.Resume\"\n      src=\"../../assets/resume.png\"/>\n  </div>\n  <div fxLayout=\"row\" fxLayoutAlign=\"center\">{{name}}</div>\n</button>\n\n"
 
 /***/ }),
 
@@ -518,11 +515,15 @@ var Shortcut = /** @class */ (function () {
         if (this.fileType === _interfaces_file__WEBPACK_IMPORTED_MODULE_2__["FileType"].Folder
             || this.fileType === _interfaces_file__WEBPACK_IMPORTED_MODULE_2__["FileType"].Post) {
             link = [this.fileType, this.id];
+            this.router.navigate(link);
+        }
+        else if (this.fileType === _interfaces_file__WEBPACK_IMPORTED_MODULE_2__["FileType"].Resume) {
+            window.open('https://drive.google.com/file/d/1GOkKzzs57FJ3fCZod4F-50rDRfbeO-T4/view');
         }
         else {
             link = [this.fileType];
+            this.router.navigate(link);
         }
-        this.router.navigate(link);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -1093,6 +1094,7 @@ var FileType;
     FileType["Terminal"] = "terminal";
     FileType["Post"] = "post";
     FileType["About"] = "about";
+    FileType["Resume"] = "resume";
 })(FileType || (FileType = {}));
 
 
@@ -1264,7 +1266,7 @@ var POINTS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div fxLayout=\"row\">\n  <shortcut\n    [name]=\"'BLM'\"\n    [fileType]=\"FileType.Folder\"\n    [id]=\"1\">\n  </shortcut>\n  <shortcut\n    [name]=\"'About'\"\n    [fileType]=\"FileType.About\"\n    [id]=\"2\">\n  </shortcut>\n</div>\n"
+module.exports = "<div fxLayout=\"row wrap\">\n  <shortcut\n    [name]=\"'About'\"\n    [fileType]=\"FileType.About\"\n    [id]=\"2\">\n  </shortcut>\n  <shortcut\n    [name]=\"'BLM'\"\n    [fileType]=\"FileType.Folder\"\n    [id]=\"1\">\n  </shortcut>\n  <shortcut\n    [name]=\"'Resume'\"\n    [fileType]=\"FileType.Resume\"\n    [id]=\"-1\">\n  </shortcut>\n</div>\n"
 
 /***/ }),
 
