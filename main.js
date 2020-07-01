@@ -1107,7 +1107,7 @@ var FileType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n\n.button-container {\n    margin-top: 5px;\n}\n"
+module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n\n.button-container {\n    margin-top: 5px;\n}\n\n.content-container {\n    overflow-y: scroll;\n    max-height: 150px;\n}\n"
 
 /***/ }),
 
@@ -1118,7 +1118,7 @@ module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      <div>\n\t<b>{{points[pointIndex].title}}.</b> {{points[pointIndex].description}}\n      </div>\n      <div class=\"button-container\" fxLayout=\"row-reverse\">\n\t<button mat-button [disabled]=\"pointIndex === points.length - 1\"\n\t\t(click)=\"onNext()\">Next</button>\n\t<button mat-button [disabled]=\"pointIndex === 0\"\n\t\t(click)=\"onPrevious()\">Previous</button>\n      </div>\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
+module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      <div class=\"content-container\">\n\t<b>{{points[pointIndex].title}}.</b> {{points[pointIndex].description}}\n      </div>\n      <div class=\"button-container\" fxLayout=\"row-reverse\">\n\t<button mat-button [disabled]=\"pointIndex === points.length - 1\"\n\t\t(click)=\"onNext()\">Next</button>\n\t<button mat-button [disabled]=\"pointIndex === 0\"\n\t\t(click)=\"onPrevious()\">Previous</button>\n      </div>\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
 
 /***/ }),
 
@@ -1227,11 +1227,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POINTS", function() { return POINTS; });
 var POINTS = [
     {
-        latitude: 49.1783514,
-        longitude: -123.2764278,
-        zoom: 8,
+        latitude: 49.1283514,
+        longitude: -123.2264278,
+        zoom: 10,
         title: 'Richmond, Canada',
-        description: 'I was born here. My mom immigrated here right before the Third Taiwan Strait Crisis.',
+        description: 'I was born here. My mom immigrated to Richmond amid escalating tensions between Taiwan and China, right before the Third Taiwan Strait Crisis. I visited this city as an adult, experiencing the cultural shock of expecting a place to be Western, only to learn that it was 53% Chinese. When shopping at the Richmond Centre, so much of the signage was in Chinese that I thought maybe I had taken the plane to Taipei by mistake. In all honesty, I did not spend much time in Canada, nor do I know it\'s history well, but am thankful to hold its citizenship.',
     },
     {
         latitude: 23.8629809,
