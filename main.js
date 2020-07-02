@@ -778,7 +778,7 @@ var DETAILS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\nh1.mat-dialog-title {\n    max-height: 65px;\n}\n\ndiv.mat-dialog-content {\n    max-height: 200px;\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n\n@media screen and (max-width: 840px) {\n    h1.mat-dialog-title {\n\toverflow: scroll;\n    }\n}\n"
+module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\nh1.mat-dialog-title {\n    max-height: 65px;\n}\n\ndiv.mat-dialog-content {\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n\n@media screen and (max-width: 840px) {\n    h1.mat-dialog-title {\n\tmax-height: 200px;\n\toverflow: scroll;\n    }\n}\n"
 
 /***/ }),
 
@@ -1107,7 +1107,7 @@ var FileType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n\n.button-container {\n    margin-top: 5px;\n}\n\n.content-container {\n    overflow-y: scroll;\n    max-height: 150px;\n}\n"
+module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n\n.button-container {\n    margin-top: 5px;\n}\n\n@media screen and (max-width: 840px) {\n    .content-container {\n\toverflow-y: scroll;\n\tmax-height: 150px;\n    }\n}\n"
 
 /***/ }),
 
@@ -1231,21 +1231,21 @@ var POINTS = [
         longitude: -123.2264278,
         zoom: 10,
         title: 'Richmond, Canada',
-        description: 'I was born here. My mom immigrated to Richmond amid escalating tensions between Taiwan and China, right before the Third Taiwan Strait Crisis. I visited this city as an adult, experiencing the cultural shock of expecting a place to be Western, only to learn that it was 53% Chinese. When shopping at the Richmond Centre, so much of the signage was in Chinese that I thought perhaps I wrongly took the plane to Taipei. In all honesty, I neither spent much time in Canada, nor know its history well, but am immensely grateful to hold Canadian citizenship. Thanks mom!',
+        description: 'I was born here. My mom immigrated to Richmond amid escalating tensions between Taiwan and China, right before the Third Taiwan Strait Crisis. Visiting this city as an adult, I experienced the cultural shock of expecting a place to be Western, only to learn that it was 53% Chinese. So much of the signage at Richmond Centre was in Chinese that I thought perhaps I accidentally flew to Taipei. Although I neither spent much time in Canada, nor know its history well, I am immensely grateful to hold Canadian citizenship.',
     },
     {
         latitude: 23.8629809,
         longitude: 121.16388,
         zoom: 6,
         title: 'Taipei, Taiwan',
-        description: 'I moved to Taipei as a toddler and spent my first 18 years there. Taiwan is a culinary paradise and a humidity hell. It is a vibrant democracy, where one can freely make fun of its president on Twitter. I went to a public school first, Da\'an Elementary school, then a private international school, Taipei American School. For this reason I speak both Mandarin and English fluently and feel within myself both cultures. I recognize my privilege having attended a wealthy, exclusive school, which juxtaposes sharply against my public school experience. I should also mention that I had Boba tea before it was mainstream.',
+        description: 'I moved to Taipei as a toddler and spent my first 18 years there. Taiwan is a culinary paradise,  a humidity hell, and a vibrant democracy where one can freely make fun of its president on Twitter. Here, I routinely had Boba tea before it was mainstream. I first went to a public school, Da\'an Elementary school, then a private international school, Taipei American School. For this reason I speak both Mandarin and English, and feel within myself a melting pot of the two cultures. I recognize my privilege having attended a wealthy, exclusive school - which juxtaposed against my public school experience - and it was with this strong sense of gratitude that I went to college in the states.',
     },
     {
         latitude: 33.7676334,
         longitude: -84.56103223,
         zoom: 6,
         title: 'Atlanta, Georgia',
-        description: 'I went to Georgia Tech for undergrad. There, I was greeted with Southern hospitality, stuffed with delicious slow-cooked pulled-pork, grits, and biscuits, and confounded by the spectacular number of Peachtree roads, streets, and avenues. I made terrific friends from all over the world, of different upbringings, and studied many a night at Wafflehouse and the CULC. In short, I went to Atlanta as a boy and left as a man. Because it was the city that solidified my American identity, in a strange way, I think of myself as a Southerner.',
+        description: 'I went to Georgia Tech for undergrad. This was the city where I went as a boy and left as a man. There, I was greeted with Southern hospitality, stuffed with delicious slow-cooked pulled-pork, grits, and biscuits, and confounded by the spectacular number of Peachtree roads, streets, and avenues. I made terrific friends from all over the world, of different upbringings, and studied many a night at Wafflehouse and the CULC. Because it was the city that solidified my American identity, in a strange way, I think of myself as a Southerner.',
     },
     {
         latitude: 42.3142643,
