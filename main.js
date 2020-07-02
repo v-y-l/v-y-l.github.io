@@ -778,7 +778,7 @@ var DETAILS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\nh1.mat-dialog-title {\n    max-height: 65px;\n}\n\ndiv.mat-dialog-content {\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n\n@media screen and (max-width: 840px) {\n    h1.mat-dialog-title {\n\tmax-height: 200px;\n\toverflow: scroll;\n    }\n}\n"
+module.exports = "a {\n    outline: none;\n}\n\nh1 {\n    margin-bottom: 0px;\n}\n\ndiv.mat-dialog-content {\n    margin: 10px 0px;\n    padding: 0px;\n}\n\np {\n    margin: 0px;\n}\n\ndiv.button-container {\n    padding-top: 10px;\n}\n\ndiv.citations-container {\n    width: 100%;\n}\n\n@media screen and (max-width: 840px) {\n    h1.mat-dialog-title {\n\toverflow: scroll;\n\tmax-height: 65px;\n    }\n    div.mat-dialog-content {\n\toverflow: scroll;\n\tmax-height: 200px;\n    }\n}\n"
 
 /***/ }),
 
@@ -1107,7 +1107,7 @@ var FileType;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n\n.button-container {\n    margin-top: 5px;\n}\n\n@media screen and (max-width: 840px) {\n    .content-container {\n\toverflow-y: scroll;\n\tmax-height: 150px;\n    }\n}\n"
+module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\n\n.about-box {\n    position: absolute;\n    bottom: .5em;\n    left: .5em;\n    background: white;\n    left: 5%;\n    bottom: 5%;\n    width: 87%;\n    border-radius:8px;\n    border-top-width:1.33333px;\n    box-shadow:rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;\n    padding: 10px;\n}\n\n.button-container {\n    margin-top: 5px;\n}\n\n@media screen and (max-width: 840px) {\n    .content-container {\n\toverflow-y: scroll;\n\tmax-height: 130px;\n    }\n}\n"
 
 /***/ }),
 
@@ -1118,7 +1118,7 @@ module.exports = ".map {\n    height: 100%;\n}\n\n.button {\n    z-index: 2;\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      <div class=\"content-container\">\n\t<b>{{points[pointIndex].title}}.</b> {{points[pointIndex].description}}\n      </div>\n      <div class=\"button-container\" fxLayout=\"row-reverse\">\n\t<button mat-button [disabled]=\"pointIndex === points.length - 1\"\n\t\t(click)=\"onNext()\">Next</button>\n\t<button mat-button [disabled]=\"pointIndex === 0\"\n\t\t(click)=\"onPrevious()\">Previous</button>\n      </div>\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
+module.exports = "<panel [name]=\"'About'\">\n  <ng-container content>\n    <div #aboutBox class=\"about-box\">\n      <div #content class=\"content-container\">\n\t<b>{{points[pointIndex].title}}.</b> {{points[pointIndex].description}}\n      </div>\n      <div class=\"button-container\" fxLayout=\"row-reverse\">\n\t<button mat-button [disabled]=\"pointIndex === points.length - 1\"\n\t\t(click)=\"onNext()\">Next</button>\n\t<button mat-button [disabled]=\"pointIndex === 0\"\n\t\t(click)=\"onPrevious()\">Previous</button>\n      </div>\n    </div>\n    <div id=\"map\" class=\"map\"></div>\n  </ng-container>\n</panel>\n"
 
 /***/ }),
 
@@ -1181,12 +1181,14 @@ var About = /** @class */ (function () {
         this.pointIndex -= 1;
         var position = this.getCurrentPosition();
         var zoom = this.getCurrentZoom();
+        this.content.nativeElement.scrollTop = 0;
         this.flyTo(position, zoom);
     };
     About.prototype.onNext = function () {
         this.pointIndex += 1;
         var position = this.getCurrentPosition();
         var zoom = this.getCurrentZoom();
+        this.content.nativeElement.scrollTop = 0;
         this.flyTo(position, zoom);
     };
     About.prototype.flyTo = function (position, zoom) {
@@ -1201,6 +1203,10 @@ var About = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('aboutBox'),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
     ], About.prototype, "aboutBox", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('content'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], About.prototype, "content", void 0);
     About = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'about',
@@ -1234,21 +1240,21 @@ var POINTS = [
         description: 'I was born here. My mom immigrated to Richmond amid escalating tensions between Taiwan and China, right before the Third Taiwan Strait Crisis. Visiting this city as an adult, I experienced the cultural shock of expecting a place to be Western, only to learn that it was 53% Chinese. So much of the signage at Richmond Centre was in Chinese that I thought perhaps I accidentally flew to Taipei. Although I neither spent much time in Canada, nor know its history well, I am immensely grateful to hold Canadian citizenship.',
     },
     {
-        latitude: 23.8629809,
+        latitude: 21.8629809,
         longitude: 121.16388,
         zoom: 6,
         title: 'Taipei, Taiwan',
         description: 'I moved to Taipei as a toddler and spent my first 18 years there. Taiwan is a culinary paradise,  a humidity hell, and a vibrant democracy where one can freely make fun of its president on Twitter. Here, I routinely had Boba tea before it was mainstream. I first went to a public school, Da\'an Elementary school, then a private international school, Taipei American School. For this reason I speak both Mandarin and English, and feel within myself a melting pot of the two cultures. I recognize my privilege having attended a wealthy, exclusive school - which juxtaposed against my public school experience - and it was with this strong sense of gratitude that I went to college in the states.',
     },
     {
-        latitude: 33.7676334,
+        latitude: 30.7676334,
         longitude: -84.56103223,
-        zoom: 6,
+        zoom: 5,
         title: 'Atlanta, Georgia',
         description: 'I went to Georgia Tech for undergrad. This was the city where I went as a boy and left as a man. There, I was greeted with Southern hospitality, stuffed with delicious slow-cooked pulled-pork, grits, and biscuits, and confounded by the spectacular number of Peachtree roads, streets, and avenues. I made terrific friends from all over the world, of different upbringings, and studied many a night at Wafflehouse and the CULC. Because it was the city that solidified my American identity, in a strange way, I think of myself as a Southerner.',
     },
     {
-        latitude: 42.3142643,
+        latitude: 40.3142643,
         longitude: -71.110711,
         zoom: 6,
         title: 'Boston, Massachussetts',
